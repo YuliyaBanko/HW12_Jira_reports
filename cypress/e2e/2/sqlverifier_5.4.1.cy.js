@@ -1,10 +1,9 @@
 import { faker } from '@faker-js/faker';
-import { LoginPageSQL } from '../../fixtures/pages/sqlloginpage';
+const loginPageElements = require('../../fixtures/selectorsSQL.json');
 
-describe("Sqlverifier login - UI",()=> {
-    it("User cant logIn with old password", ()=>{
-        
-        let loginPageSQL = new LoginPageSQL();
+describe("Sqlverifier login - UI", () => {
+    it("User can't log in with old password", () => {
+      
         let oldPasswordSQL = "Koko";
         let newPasswordSQL = faker.internet.password(10);
         let username = "Koko";
@@ -12,21 +11,23 @@ describe("Sqlverifier login - UI",()=> {
         cy.log("Generated new password:", newPasswordSQL);
 
         cy.visit("/");
-        loginPageSQL.login(username, oldPasswordSQL);
-        loginPageSQL.elements.entityMenu().should("exist");
 
-        cy.changePasswordSQL(oldPasswordSQL,newPasswordSQL);
-        loginPageSQL.elements.accountMenu().click();
-        loginPageSQL.elements.logOutButton().click();
+        cy.loginSQL(username, oldPasswordSQL);
+        cy.get(loginPageElements.entityMenu).should("exist");
+
+        cy.changePasswordSQL(oldPasswordSQL, newPasswordSQL);
+        cy.get(loginPageElements.accountMenu).click();
+        cy.get(loginPageElements.logOutButton).click();
         cy.get('h4').should("exist");
 
-        loginPageSQL.login(username, oldPasswordSQL);
+        cy.loginSQL(username, oldPasswordSQL);
         cy.get('strong').should("exist");
 
-        loginPageSQL.elements.passwordField().clear().type(newPasswordSQL);
-        loginPageSQL.elements.signInButton().click();
+        cy.get(loginPageElements.passwordField).clear().type(newPasswordSQL);
+        cy.get(loginPageElements.signInButton).click();
         cy.changePasswordSQL(newPasswordSQL, oldPasswordSQL);
-    })
-})
+    });
+});
+
 
 

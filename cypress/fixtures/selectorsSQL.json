@@ -1,0 +1,10 @@
+{
+    "accountMenu": "[data-cy='accountMenu'] > .d-flex > span",
+    "loginMenu": "[data-cy='login']",
+    "userNameField": "[data-cy='username']",
+    "passwordField": "[data-cy='password']",
+    "signInButton": "[data-cy='submit'] > span",
+    "entityMenu": "[data-cy='entity'] > .d-flex > span",
+    "logOutButton": "[data-cy='logout']"
+  }
+  

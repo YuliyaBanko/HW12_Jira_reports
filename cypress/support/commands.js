@@ -49,3 +49,4 @@ Cypress.Commands.add('changePasswordSQL', (oldPasswordSQL, newPasswordSQL) => {
     cy.get('[data-cy="confirmPassword"]').type(newPasswordSQL);
     cy.get('[data-cy="submit"] > span').click();
 });
+
