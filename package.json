@@ -5,6 +5,7 @@
   "scripts": {
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run",
+    "cy:junit": "npx cypress run --reporter mocha-junit-reporter",
     "cy:run:prod": "npx cypress run --config-file cypress-prod.config.js",
     "cy:run:prod:chrome": "npx cypress run --config-file cypress-prod.config.js --browser chrome",
     "cy:run:prod:electron": "npx cypress run --config-file cypress-prod.config.js --browser electron",
@@ -30,6 +31,7 @@
   "homepage": "https://github.com/YuliyaBanko/Cypress_tests#readme",
   "devDependencies": {
     "@faker-js/faker": "^9.2.0",
-    "cypress": "^13.15.0"
+    "cypress": "^13.15.0",
+    "mocha-junit-reporter": "^2.2.1"
   }
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="44.794" tests="4" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-12-18T07:07:02" tests="0" file="cypress\e2e\2\login_sqlveridier_5.3.4.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="LoginSqlverifier" timestamp="2024-12-18T07:07:02" tests="2" time="23.823" failures="0">
+    <testcase name="LoginSqlverifier successfulLogin" time="5.916" classname="successfulLogin">
+    </testcase>
+    <testcase name="LoginSqlverifier unsuccessfulLogin" time="17.616" classname="unsuccessfulLogin">
+    </testcase>
+  </testsuite>
+  <testsuite name="Registration" timestamp="2024-12-18T07:07:26" tests="2" time="20.962" failures="0">
+    <testcase name="Registration successfulRegistration" time="3.042" classname="successfulRegistration">
+    </testcase>
+    <testcase name="Registration unsuccessfulRegistration" time="17.558" classname="unsuccessfulRegistration">
+    </testcase>
+  </testsuite>
+</testsuites>
